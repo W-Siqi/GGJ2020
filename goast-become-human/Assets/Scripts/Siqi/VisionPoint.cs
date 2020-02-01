@@ -20,7 +20,21 @@ public class VisionPoint : MonoBehaviour
         UpdateVisionStateTo(characterInfo);
     }
 
-    public void SetVision(VisionScope visionScope) {
+	public bool visionEnhanced{
+		get;private set;
+	}
+
+	public bool IsWithinVision(Vector3 position) {
+        position.z = transform.position.z;
+        var distance = (position - transform.position).magnitude;
+
+        if (visionEnhanced)
+            return distance < largetVisionRadius;
+        else
+            return distance < smallVisionRadius;
+	}
+
+	public void SetVision(VisionScope visionScope) {
         float radius = smallVisionRadius;
         switch (visionScope) {
             case VisionScope.small:
@@ -41,9 +55,14 @@ public class VisionPoint : MonoBehaviour
     }
 
     void UpdateVisionStateTo(CharacterInfo characterInfo) {
-        if (characterInfo.hasHead)
-            SetVision(VisionScope.large);
-        else
-            SetVision(VisionScope.small);
+		if (characterInfo.hasHead)
+		{
+			visionEnhanced = true;
+			SetVision(VisionScope.large);
+		}
+		else {
+			visionEnhanced = false;
+			SetVision(VisionScope.small);
+		}
     }
 }
