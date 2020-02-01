@@ -7,7 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public float speed =1f;
     public float moveRange = 1f;
     public bool isMoving = true;
-
+	public bool isInitMovingLeft = true;
     private float left;
     private float right;
     private bool towardsLeft;
@@ -17,6 +17,11 @@ public class MovingPlatform : MonoBehaviour
         towardsLeft = true;
         left = transform.position.x - moveRange;
         right = transform.position.x + moveRange;
+
+		if (isInitMovingLeft)
+			towardsLeft = true;
+		else
+			towardsLeft = false;
     }
 
     private void Update()
