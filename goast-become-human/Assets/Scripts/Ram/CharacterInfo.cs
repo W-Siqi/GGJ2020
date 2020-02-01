@@ -11,6 +11,7 @@ public class CharacterInfo : MonoBehaviour
     public bool hasChest { get; private set; }
     public bool hasHeart { get; private set; }
 
+    public ItemInfo.ItemType equippedItem;
 
     [SerializeField] float normalJumpForce;
     [SerializeField] float legsJumpForce;
@@ -19,13 +20,18 @@ public class CharacterInfo : MonoBehaviour
     [SerializeField] float maxJumpSpeed;
     [SerializeField] float maxJumpKeypress;
 
-    [SerializeField] string groundTag;
+    [SerializeField] int chestHealth;
 
+    public int playerHealth = 0;
+
+    public int playerHealthBuffer = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        equippedItem = ItemInfo.ItemType.None;
+
     }
 
     // Update is called once per frame
@@ -34,28 +40,69 @@ public class CharacterInfo : MonoBehaviour
         
     }
 
-    public void SetBodyPart( BodypartInfo.BodyPart bodyPartToSet, bool isAdd )
+    public bool SetBodyPart( BodypartInfo.BodyPart bodyPartToSet, bool isAdd )
     {
 
-        if(bodyPartToSet == BodypartInfo.BodyPart.Hands)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Hands && !hasHands)
+        {
             hasHands = isAdd;
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Legs)
-            hasLegs = isAdd;
+            if (!isAdd)
+            {
+                equippedItem = ItemInfo.ItemType.None;
+                DropEquippedItem();
+            }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Chest)
+            return true;
+        }
+
+        if (bodyPartToSet == BodypartInfo.BodyPart.Legs && !hasLegs)
+        {
+            hasLegs = isAdd;
+            return true;
+        }
+
+        if (bodyPartToSet == BodypartInfo.BodyPart.Chest && !hasChest)
+        {
             hasChest = isAdd;
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Head)
-            hasHead = isAdd;
+            if (isAdd)
+            {
+                BufferHealthModifier(chestHealth);
+            } else
+            {
+                BufferHealthModifier(-chestHealth);
+            }
+                
+            return true;
+        }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Heart)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Head && hasHead)
+        {
+            hasHead = isAdd;
+            return true;
+        }
+
+        if (bodyPartToSet == BodypartInfo.BodyPart.Heart && hasHeart)
+        {
             hasHeart = isAdd;
+            return true;
+        }
+
+        return false;
 
     }
 
     public void LoseRandomBodyPart()
     {
+
+        if(playerHealthBuffer > 0)
+        {
+
+            playerHealthBuffer--;
+
+            return;
+        }
 
         List<BodypartInfo.BodyPart> currentBodyParts = new List<BodypartInfo.BodyPart>();
 
@@ -87,6 +134,49 @@ public class CharacterInfo : MonoBehaviour
 
     }
 
+
+    void BufferHealthModifier(int amt)
+    {
+
+        playerHealthBuffer += amt;
+
+        if (playerHealthBuffer < 0)
+            playerHealthBuffer = 0;
+
+        if (playerHealth > chestHealth)
+            playerHealthBuffer = chestHealth;
+
+    }
+
+
+    public void EquipItem(ItemInfo.ItemType item)
+    {
+        if (!hasHands)
+        {
+            return;
+        }
+
+        if (equippedItem == item)
+        {
+
+            return;
+
+        }
+        else
+        {
+            equippedItem = item;
+            DropEquippedItem();
+        }
+    }
+
+    void DropEquippedItem()
+    {
+
+        //TODO - drop equipped item
+
+    }
+
+    //GETTER FUNCTIONS
     public float GetMoveSpeed()
     {
         return moveForce;
@@ -106,12 +196,6 @@ public class CharacterInfo : MonoBehaviour
 
         return maxSpeed;
 
-    }
-
-    public string GetGroundTag()
-    {
-
-        return groundTag;
 
     }
 

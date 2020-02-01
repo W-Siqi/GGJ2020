@@ -270,9 +270,9 @@ public class CharacterController : MonoBehaviour
         if (bpi != null)
         {
 
-            charInfo.SetBodyPart(bpi.thisBodyPart, true);
+            if(charInfo.SetBodyPart(bpi.thisBodyPart, true))
+                Destroy(bpi.gameObject);
 
-            Destroy(bpi.gameObject);
 
         }
 
@@ -282,6 +282,8 @@ public class CharacterController : MonoBehaviour
             charInfo.LoseRandomBodyPart();
 
         }
+
+
 
     }
 
