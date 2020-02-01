@@ -11,6 +11,8 @@ public class CharacterDrawer : MonoBehaviour
         public bool hasHead;
         public bool hasHeart;
         public bool hasChest;
+        public bool hasGun;
+        public bool hasSword;
     }
 
     [System.Serializable]
@@ -21,12 +23,17 @@ public class CharacterDrawer : MonoBehaviour
 
     [SerializeField]
     Debugger debugger;
+
     [SerializeField]
     private CharacterInfo characterInfo;
+    [SerializeField]
+    private CharacterController characterController;
+
     [SerializeField]
     private SpriteRenderer goastBodyRenderer;
     [SerializeField]
     Color goastHiddenColor;
+
     private BodyState bodyState;
 
     private void Start()
@@ -37,6 +44,8 @@ public class CharacterDrawer : MonoBehaviour
 
     private void Update()
     {
+        UpdateCharacterFacingDirection();
+
         if (debugger.isDebugOn) {
             RepaintBodyFromDebugState();
         }
@@ -51,7 +60,9 @@ public class CharacterDrawer : MonoBehaviour
             bodyState.hasHands != characterInfo.hasHands ||
             bodyState.hasChest != characterInfo.hasChest ||
             bodyState.hasLegs != characterInfo.hasLegs ||
-            bodyState.hasHeart != characterInfo.hasHeart;
+            bodyState.hasHeart != characterInfo.hasHeart ||
+            bodyState.hasGun != (characterInfo.equippedItem== ItemInfo.ItemType.Gun)||
+            bodyState.hasSword != (characterInfo.equippedItem == ItemInfo.ItemType.Sword);
         }
     }
 
@@ -64,27 +75,43 @@ public class CharacterDrawer : MonoBehaviour
             bodyState.hasHeart;
         }
     }
+
     private void UpdateBodyState() {
         bodyState.hasHead = characterInfo.hasHead;
         bodyState.hasHands = characterInfo.hasHands;
         bodyState.hasChest = characterInfo.hasChest;
         bodyState.hasLegs = characterInfo.hasLegs;
         bodyState.hasHeart = characterInfo.hasHeart;
+        bodyState.hasGun = (characterInfo.equippedItem == ItemInfo.ItemType.Gun);
+        bodyState.hasSword = (characterInfo.equippedItem == ItemInfo.ItemType.Sword);
+
     }
 
     private void RepaintBody() {
+        // paint body part
         UpdateBodyState();
         foreach (var bodyPart in GetComponentsInChildren<CharacterBodyDisplayer>()) {
             bodyPart.UpdateAccrodingTo(bodyState);
         }
 
-
+        // adjust goast alpha
         if (isAnyBodyPart)
         {
             goastBodyRenderer.color = goastHiddenColor;
         }
         else {
             goastBodyRenderer.color = Color.white;
+        }
+    }
+
+    private void UpdateCharacterFacingDirection() {
+        if (characterController.facingLeft)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 

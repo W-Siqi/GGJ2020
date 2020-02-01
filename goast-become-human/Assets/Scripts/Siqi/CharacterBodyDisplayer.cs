@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterBodyDisplayer : MonoBehaviour
 {
     public enum BodyType {
-        hand,leg,chest,head,heart
+        hand,leg,chest,head,heart,sword,gun
     }
 
     public BodyType type;
@@ -30,6 +30,12 @@ public class CharacterBodyDisplayer : MonoBehaviour
                 break;
             case BodyType.head:
                 isActivated = bodyState.hasHead;
+                break;
+            case BodyType.gun:
+                isActivated = bodyState.hasGun;
+                break;
+            case BodyType.sword:
+                isActivated = bodyState.hasSword;
                 break;
         }
 
