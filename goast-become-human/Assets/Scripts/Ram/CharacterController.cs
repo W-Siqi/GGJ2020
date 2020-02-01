@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour
     public PlayerType thisPlayerType;
 
     CharacterInfo charInfo;
-
+    WeaponController weaponCont;
     InputManager ipmanager;
 
     Rigidbody2D rb2D;
@@ -20,7 +20,9 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] Transform leftWeaponSocket;
     [SerializeField] Transform rightWeaponSocket;
- 
+
+    public bool facingLeft;
+
     [SerializeField] float groundRaycastDist;
 
     [SerializeField] bool isStandingOnGround;
@@ -247,6 +249,8 @@ public class CharacterController : MonoBehaviour
 
         moveRightFired = true;
 
+        facingLeft = false;
+
     }
 
 
@@ -265,18 +269,37 @@ public class CharacterController : MonoBehaviour
 
         moveLeftFired = true;
 
+        facingLeft = true;
+
     }
 
 
     void PlayerX()
     {
 
+        //need origin of raycast -> this is the transform of the weapon sockets
 
+        //need direction of raycast -> (origin - self.pos)
+        if (facingLeft)
+        {
+            Vector2 origin = new Vector2(leftWeaponSocket.position.x, leftWeaponSocket.position.y);
+
+            weaponCont.UseWeapon(charInfo.equippedItem, origin, Vector2.left);
+
+        } else
+        {
+            Vector2 origin = new Vector2(rightWeaponSocket.position.x, rightWeaponSocket.position.y);
+
+            weaponCont.UseWeapon(charInfo.equippedItem, origin, Vector2.right);
+        }
 
     }
 
 
 
+
+
+    //COLLISION FUNCTIONS ###############################
     //Lose Health functions (collision detection)
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -289,7 +312,6 @@ public class CharacterController : MonoBehaviour
 
             if(charInfo.SetBodyPart(bpi.thisBodyPart, true))
                 Destroy(bpi.gameObject);
-
 
         }
 
@@ -314,12 +336,7 @@ public class CharacterController : MonoBehaviour
 
         }
 
-
-
     }
-
-
-
 
 
 }
