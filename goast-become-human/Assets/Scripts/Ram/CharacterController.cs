@@ -18,9 +18,11 @@ public class CharacterController : MonoBehaviour
     bool moveLeftFired;
     bool moveUpFired;
 
-    bool isStandingOnGround;
-    bool jumpHeld;
-    bool jumpStarted;
+    [SerializeField] float groundRaycastDist;
+
+    public bool isStandingOnGround;
+    public bool jumpHeld;
+    public bool jumpStarted;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +62,26 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        LayerMask groundLayer = LayerMask.GetMask("groundCollider");
+
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, groundRaycastDist, groundLayer);
+
+        if(hit.collider != null)
+        {
+
+            Debug.Log(hit.collider.gameObject.name);
+
+            if (hit.collider.gameObject.CompareTag("Ground"))
+                isStandingOnGround = true;
+            else
+                isStandingOnGround = false;
+
+        } else
+        {
+            isStandingOnGround = false;
+        }
+
     }
 
 
@@ -258,13 +279,6 @@ public class CharacterController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            if(IsCollidedWithGround(collision))
-                isStandingOnGround = true;
-
-        }
-
         BodypartInfo bpi = collision.gameObject.GetComponent<BodypartInfo>();
 
         if (bpi != null)
@@ -298,43 +312,6 @@ public class CharacterController : MonoBehaviour
         }
 
 
-
-    }
-
-
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            if(!IsCollidedWithGround(collision))
-                isStandingOnGround = false;
-
-        }
-
-    }
-
-
-    bool IsCollidedWithGround(Collision2D col)
-    {
-
-        foreach(ContactPoint2D c  in col.contacts)
-        {
-
-            Vector2 col_dir = c.point - rb2D.position;
-
-            if(col_dir.y < 0)
-            {
-
-                return true;
-
-            }
-
-        }
-
-
-        return false;
 
     }
 
