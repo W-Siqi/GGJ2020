@@ -1971,6 +1971,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d186ba2db2e245d4bafba52cc490f621, type: 3}
+--- !u!84 &620868915
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteLightKit RT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1439
+  m_Height: 639
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &634439488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2737,41 +2772,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 285169773}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &920264043
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1437
-  m_Height: 636
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &932532284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5731,41 +5731,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d186ba2db2e245d4bafba52cc490f621, type: 3}
---- !u!84 &1991077754
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1437
-  m_Height: 636
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1996516756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6025,12 +5990,12 @@ PrefabInstance:
     - target: {fileID: 6344674297705157556, guid: ff35f4599ac054be1aba64be16ac641d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.03
+      value: -9.87
       objectReference: {fileID: 0}
     - target: {fileID: 6344674297705157556, guid: ff35f4599ac054be1aba64be16ac641d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.28
+      value: 24.09
       objectReference: {fileID: 0}
     - target: {fileID: 6344674297705157556, guid: ff35f4599ac054be1aba64be16ac641d,
         type: 3}
@@ -6082,6 +6047,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: VisionEye
       objectReference: {fileID: 0}
+    - target: {fileID: 6344674297705157559, guid: ff35f4599ac054be1aba64be16ac641d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344674297705157559, guid: ff35f4599ac054be1aba64be16ac641d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344674297705157559, guid: ff35f4599ac054be1aba64be16ac641d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff35f4599ac054be1aba64be16ac641d, type: 3}
 --- !u!4 &2122935302 stripped
@@ -6118,10 +6098,30 @@ PrefabInstance:
       propertyPath: spriteLightRT
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7399375401786599430, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
+        type: 3}
+      propertyPath: intensity
+      value: 0.97
+      objectReference: {fileID: 0}
     - target: {fileID: 7399375401786599448, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: orthographic size
       value: 15.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399375401786599448, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399375401786599448, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.4528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399375401786599448, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.4528302
       objectReference: {fileID: 0}
     - target: {fileID: 7399375401786599449, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
@@ -6187,7 +6187,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1991077754}
+      objectReference: {fileID: 620868915}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: orthographic size
@@ -6196,17 +6196,22 @@ PrefabInstance:
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.23584908
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.23584908
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.23584908
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399375402018193622, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
+        type: 3}
+      propertyPath: rtSizeMultiplier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e, type: 3}
