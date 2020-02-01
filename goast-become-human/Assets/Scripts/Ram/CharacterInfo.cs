@@ -77,13 +77,13 @@ public class CharacterInfo : MonoBehaviour
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Head && hasHead)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Head && !hasHead)
         {
             hasHead = isAdd;
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Heart && hasHeart)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Heart && !hasHeart)
         {
             hasHeart = isAdd;
             return true;

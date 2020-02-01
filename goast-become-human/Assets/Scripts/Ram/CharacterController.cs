@@ -18,11 +18,14 @@ public class CharacterController : MonoBehaviour
     bool moveLeftFired;
     bool moveUpFired;
 
+    [SerializeField] Transform leftWeaponSocket;
+    [SerializeField] Transform rightWeaponSocket;
+ 
     [SerializeField] float groundRaycastDist;
 
-    public bool isStandingOnGround;
-    public bool jumpHeld;
-    public bool jumpStarted;
+    [SerializeField] bool isStandingOnGround;
+    bool jumpHeld;
+    bool jumpStarted;
 
     // Start is called before the first frame update
     void Start()
