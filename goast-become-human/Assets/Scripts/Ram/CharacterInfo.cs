@@ -5,11 +5,11 @@ using UnityEngine;
 public class CharacterInfo : MonoBehaviour
 {
 
-    public bool hasHead { get; private set; }
-    public bool hasHands { get; private set; }
-    public bool hasLegs { get; private set; }
-    public bool hasChest { get; private set; }
-    public bool hasHeart { get; private set; }
+    public bool hasHead;
+    public bool hasHands;
+    public bool hasLegs;
+    public bool hasChest;
+    public bool hasHeart;
 
     public ItemInfo.ItemType equippedItem;
 

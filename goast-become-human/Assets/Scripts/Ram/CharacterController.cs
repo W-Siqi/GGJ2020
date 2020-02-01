@@ -39,6 +39,9 @@ public class CharacterController : MonoBehaviour
 
         ipmanager = GameObject.FindObjectOfType<InputManager>();
 
+        weaponCont = this.gameObject.GetComponent<WeaponController>();
+
+
         if (thisPlayerType == PlayerType.Player1)
         {
 
@@ -333,6 +336,8 @@ public class CharacterController : MonoBehaviour
                 charInfo.EquipItem(item.thisItemType);
 
             }
+
+            Destroy(item.gameObject);
 
         }
 
