@@ -74,9 +74,11 @@ public class CharacterDrawer : MonoBehaviour
 
     private void RepaintBody() {
         UpdateBodyState();
-        foreach (var bodyPart in FindObjectsOfType<CharacterBodyDisplayer>()) {
+        foreach (var bodyPart in GetComponentsInChildren<CharacterBodyDisplayer>()) {
             bodyPart.UpdateAccrodingTo(bodyState);
         }
+
+
         if (isAnyBodyPart)
         {
             goastBodyRenderer.color = goastHiddenColor;
@@ -88,7 +90,7 @@ public class CharacterDrawer : MonoBehaviour
 
     private void RepaintBodyFromDebugState()
     {
-        foreach (var bodyPart in FindObjectsOfType<CharacterBodyDisplayer>())
+        foreach (var bodyPart in GetComponentsInChildren<CharacterBodyDisplayer>())
         {
             bodyPart.UpdateAccrodingTo(debugger.debugState);
         }
