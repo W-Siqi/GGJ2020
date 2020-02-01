@@ -43,7 +43,7 @@ public class CharacterInfo : MonoBehaviour
     public bool SetBodyPart( BodypartInfo.BodyPart bodyPartToSet, bool isAdd )
     {
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Hands && !hasHands)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Hands && (!hasHands || !isAdd) )
         {
             hasHands = isAdd;
 
@@ -56,13 +56,13 @@ public class CharacterInfo : MonoBehaviour
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Legs && !hasLegs)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Legs && (!hasLegs || !isAdd) )
         {
             hasLegs = isAdd;
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Chest && !hasChest)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Chest && (!hasChest || !isAdd) )
         {
             hasChest = isAdd;
 
@@ -77,13 +77,13 @@ public class CharacterInfo : MonoBehaviour
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Head && !hasHead)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Head && (!hasHead || !isAdd))
         {
             hasHead = isAdd;
             return true;
         }
 
-        if (bodyPartToSet == BodypartInfo.BodyPart.Heart && !hasHeart)
+        if (bodyPartToSet == BodypartInfo.BodyPart.Heart && (!hasHeart || !isAdd))
         {
             hasHeart = isAdd;
             return true;
@@ -149,23 +149,25 @@ public class CharacterInfo : MonoBehaviour
     }
 
 
-    public void EquipItem(ItemInfo.ItemType item)
+    public bool EquipItem(ItemInfo.ItemType item)
     {
         if (!hasHands)
         {
-            return;
+            return false;
         }
 
         if (equippedItem == item)
         {
 
-            return;
+            return false;
 
         }
         else
         {
             equippedItem = item;
             DropEquippedItem();
+
+            return true;
         }
     }
 

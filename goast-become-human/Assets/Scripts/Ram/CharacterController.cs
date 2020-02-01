@@ -34,13 +34,10 @@ public class CharacterController : MonoBehaviour
     {
 
         charInfo = this.gameObject.GetComponent<CharacterInfo>();
-
+        weaponCont = this.gameObject.GetComponent<WeaponController>();
         rb2D = this.gameObject.GetComponent<Rigidbody2D>();
 
         ipmanager = GameObject.FindObjectOfType<InputManager>();
-
-        weaponCont = this.gameObject.GetComponent<WeaponController>();
-
 
         if (thisPlayerType == PlayerType.Player1)
         {
@@ -77,8 +74,6 @@ public class CharacterController : MonoBehaviour
 
         if(hit.collider != null)
         {
-
-            Debug.Log(hit.collider.gameObject.name);
 
             if (hit.collider.gameObject.CompareTag("Ground"))
                 isStandingOnGround = true;
@@ -333,11 +328,15 @@ public class CharacterController : MonoBehaviour
             if(item.thisItemType != ItemInfo.ItemType.None)
             {
 
-                charInfo.EquipItem(item.thisItemType);
+                if (charInfo.EquipItem(item.thisItemType))
+                {
+
+                    Destroy(item.gameObject);
+
+                }
 
             }
 
-            Destroy(item.gameObject);
 
         }
 

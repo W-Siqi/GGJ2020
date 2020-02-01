@@ -14,7 +14,6 @@ public class WeaponController : MonoBehaviour
 
     [SerializeField] bool swordCD;
     [SerializeField] bool gunCD;
-
     
 
     // Start is called before the first frame update
@@ -43,7 +42,7 @@ public class WeaponController : MonoBehaviour
     void UseSword(Vector2 origin, Vector2 direction)
     {
 
-        LayerMask playerMask = LayerMask.GetMask("light layer");
+        LayerMask playerMask = LayerMask.GetMask("player");
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, swordRange, playerMask);
 
@@ -52,6 +51,7 @@ public class WeaponController : MonoBehaviour
 
             if (hit.collider.gameObject.CompareTag("Player"))
             {
+                Debug.Log("sword hit : " + hit.collider.gameObject.name);
 
                 hit.collider.gameObject.GetComponent<CharacterInfo>().LoseRandomBodyPart();
 
@@ -66,7 +66,7 @@ public class WeaponController : MonoBehaviour
 
     void UseGun(Vector2 origin, Vector2 direction)
     {
-        LayerMask playerMask = LayerMask.GetMask("light layer");
+        LayerMask playerMask = LayerMask.GetMask("player");
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, gunRange, playerMask);
 
@@ -75,10 +75,11 @@ public class WeaponController : MonoBehaviour
 
             if (hit.collider.gameObject.CompareTag("Player"))
             {
+                Debug.Log("gun hit : " + hit.collider.gameObject.name);
 
                 Rigidbody2D otherRb2D = hit.collider.gameObject.GetComponent<Rigidbody2D>();
 
-                otherRb2D.AddForce(direction * gunKnockbackImpulse, ForceMode2D.Impulse);
+                otherRb2D.AddForce(direction * gunKnockbackImpulse, ForceMode2D.Force);
 
                 gunCD = true;
                 StartCoroutine(WeaponCD_CR(ItemInfo.ItemType.Gun));
