@@ -437,6 +437,8 @@ MonoBehaviour:
       hasHeart: 0
       hasChest: 0
   characterInfo: {fileID: 3804341674555979561}
+  goastBodyRenderer: {fileID: 3804341674555979558}
+  goastHiddenColor: {r: 1, g: 1, b: 1, a: 0.2509804}
 --- !u!1 &1519425146
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +655,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPlayerType: 0
+  leftWeaponSocket: {fileID: 0}
+  rightWeaponSocket: {fileID: 0}
+  groundRaycastDist: 0
+  isStandingOnGround: 0
 --- !u!50 &3804341674555979563
 Rigidbody2D:
   serializedVersion: 4

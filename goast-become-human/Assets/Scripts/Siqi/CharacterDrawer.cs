@@ -23,6 +23,10 @@ public class CharacterDrawer : MonoBehaviour
     Debugger debugger;
     [SerializeField]
     private CharacterInfo characterInfo;
+    [SerializeField]
+    private SpriteRenderer goastBodyRenderer;
+    [SerializeField]
+    Color goastHiddenColor;
     private BodyState bodyState;
 
     private void Start()
@@ -51,6 +55,15 @@ public class CharacterDrawer : MonoBehaviour
         }
     }
 
+    private bool isAnyBodyPart {
+        get {
+            return bodyState.hasHead ||
+            bodyState.hasHands ||
+            bodyState.hasChest ||
+            bodyState.hasLegs ||
+            bodyState.hasHeart;
+        }
+    }
     private void UpdateBodyState() {
         bodyState.hasHead = characterInfo.hasHead;
         bodyState.hasHands = characterInfo.hasHands;
@@ -63,6 +76,13 @@ public class CharacterDrawer : MonoBehaviour
         UpdateBodyState();
         foreach (var bodyPart in FindObjectsOfType<CharacterBodyDisplayer>()) {
             bodyPart.UpdateAccrodingTo(bodyState);
+        }
+        if (isAnyBodyPart)
+        {
+            goastBodyRenderer.color = goastHiddenColor;
+        }
+        else {
+            goastBodyRenderer.color = Color.white;
         }
     }
 
