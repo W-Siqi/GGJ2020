@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VisionPoint : MonoBehaviour
 {
+    const float RADIUS_TO_METERS = 5f;
+
     public float smallVisionRadius = 1f;
     public float largetVisionRadius = 10f;
     public CharacterInfo characterInfo;
@@ -29,9 +31,9 @@ public class VisionPoint : MonoBehaviour
         var distance = (position - transform.position).magnitude;
 
         if (visionEnhanced)
-            return distance < largetVisionRadius;
+            return distance < largetVisionRadius * RADIUS_TO_METERS;
         else
-            return distance < smallVisionRadius;
+            return distance < smallVisionRadius * RADIUS_TO_METERS;
 	}
 
 	public void SetVision(VisionScope visionScope) {
@@ -64,5 +66,11 @@ public class VisionPoint : MonoBehaviour
 			visionEnhanced = false;
 			SetVision(VisionScope.small);
 		}
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(0, 1, 0, 0.3f);
+        Gizmos.DrawSphere(transform.position, smallVisionRadius * RADIUS_TO_METERS);
     }
 }

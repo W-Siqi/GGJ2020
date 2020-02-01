@@ -18,6 +18,11 @@ public class RedHeart : Heart
 
     private VisionPoint[] monitoredVisionPoints;
 
+    private void Start()
+    {
+        monitoredVisionPoints = FindObjectsOfType<VisionPoint>();
+    }
+
     private void Update()
     {
         if (isSeen)

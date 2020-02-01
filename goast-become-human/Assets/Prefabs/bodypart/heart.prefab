@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8967273476552169033}
   - component: {fileID: 1635907471716171966}
   - component: {fileID: 48009136}
+  - component: {fileID: 1806988477}
   m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
@@ -142,3 +143,18 @@ MonoBehaviour:
   moveRange: 15
   isMoving: 1
   isInitMovingLeft: 1
+--- !u!114 &1806988477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015392222579866776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4279b8187d1c54c4183b7c1f2031d434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hiddenColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  realColor: {r: 1, g: 0, b: 0, a: 1}
+  heartRenderer: {fileID: 8967273476552169033}
