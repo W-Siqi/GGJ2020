@@ -79,10 +79,10 @@ public class CharacterDrawer : MonoBehaviour
         }
         if (isAnyBodyPart)
         {
-            goastBodyRenderer.color = Color.white;
+            goastBodyRenderer.color = goastHiddenColor;
         }
         else {
-            goastBodyRenderer.color = goastHiddenColor;
+            goastBodyRenderer.color = Color.white;
         }
     }
 
