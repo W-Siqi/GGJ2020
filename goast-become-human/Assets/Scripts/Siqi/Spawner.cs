@@ -10,6 +10,14 @@ public class Spawner : MonoBehaviour
     public Vector2 spawnRange = new Vector2(1f, 1f);
     public GameObject spawnPrefab = null;
 
+    private const string NONE_TAG = "none";
+    private string spawnTagName = NONE_TAG;
+
+    void Start() {
+        spawnTagName = spawnPrefab.GetComponent<SpwanObjectTag>().name;
+        StartCoroutine(SpawnLoop());
+    }
+
     IEnumerator SpawnLoop() {
         yield return new WaitForSeconds(spwanStartTime);
 
@@ -29,7 +37,16 @@ public class Spawner : MonoBehaviour
         return transform.position + randomBias;
     }
 
-    private bool isUnderCount { get { return true; } }
+    private bool isUnderCount {
+        get {
+            if (spawnTagName == NONE_TAG)
+                return false;
+            else if (SpwanObjectTag.GetNumber(spawnTagName) < maxCount)
+                return true;
+            else
+                return false;
+        }
+    }
 
     private void OnDrawGizmos()
     {

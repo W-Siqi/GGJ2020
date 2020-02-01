@@ -412,7 +412,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1413133474}
+      objectReference: {fileID: 1272687888}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: m_BackGroundColor.r
@@ -430,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e, type: 3}
---- !u!84 &1413133474
+--- !u!84 &1272687888
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,8 +443,8 @@ RenderTexture:
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   serializedVersion: 3
-  m_Width: 522
-  m_Height: 858
+  m_Width: 484
+  m_Height: 726
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthFormat: 0
