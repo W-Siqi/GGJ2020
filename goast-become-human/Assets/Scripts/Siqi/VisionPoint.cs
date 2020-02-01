@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class VisionPoint : MonoBehaviour
 {
-    private const float SMALL_VISION_RADIUS = 1f;
-    private const float LARGE_VISION_RADIUS = 10f;
+    public float smallVisionRadius = 1f;
+    public float largetVisionRadius = 10f;
+    public CharacterInfo characterInfo;
 
     public enum VisionScope { small, large}
 
@@ -14,14 +15,19 @@ public class VisionPoint : MonoBehaviour
         SetVision(VisionScope.small);
     }
 
+    void Update()
+    {
+        UpdateVisionStateTo(characterInfo);
+    }
+
     public void SetVision(VisionScope visionScope) {
-        float radius = SMALL_VISION_RADIUS;
+        float radius = smallVisionRadius;
         switch (visionScope) {
             case VisionScope.small:
-                radius = SMALL_VISION_RADIUS;
+                radius = smallVisionRadius;
                 break;
             case VisionScope.large:
-                radius = LARGE_VISION_RADIUS;
+                radius = largetVisionRadius;
                 break;
             default:
                 Debug.LogError("wrong enum");
@@ -32,5 +38,12 @@ public class VisionPoint : MonoBehaviour
         newScale.x = radius;
         newScale.y = radius;
         transform.localScale = newScale;
+    }
+
+    void UpdateVisionStateTo(CharacterInfo characterInfo) {
+        if (characterInfo.hasHead)
+            SetVision(VisionScope.large);
+        else
+            SetVision(VisionScope.small);
     }
 }
