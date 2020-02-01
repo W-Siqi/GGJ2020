@@ -196,7 +196,6 @@ public class CharacterInfo : MonoBehaviour
 
         return maxSpeed;
 
-
     }
 
     public float GetMaxJumpSpeed()

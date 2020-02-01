@@ -283,6 +283,20 @@ public class CharacterController : MonoBehaviour
 
         }
 
+        if (collision.gameObject.CompareTag("Item"))
+        {
+
+            ItemInfo item = collision.gameObject.GetComponent<ItemInfo>();
+
+            if(item.thisItemType != ItemInfo.ItemType.None)
+            {
+
+                charInfo.EquipItem(item.thisItemType);
+
+            }
+
+        }
+
 
 
     }
