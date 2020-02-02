@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5092259645090142489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5092259645090142487}
+  - component: {fileID: 5092259645090142488}
+  m_Layer: 0
+  m_Name: SoundRepo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5092259645090142487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092259645090142489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.294012, y: -23.506855, z: -14.132471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5092259645090142488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092259645090142489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120f1a072e54d3147b30f9f10b9e273f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordPress: {fileID: 8300000, guid: 8f1732fb3bd774d16a1d0c8a9c48dfc9, type: 3}
+  gunPress: {fileID: 8300000, guid: 8d6a22b99f99c4ee2b66668bf17ad2f3, type: 3}
+  win: {fileID: 8300000, guid: 226ef2daaaef14726ae9636ae9c8ddec, type: 3}
+  gainBodyPart: {fileID: 8300000, guid: 40e9b6ff295df450a9f1f436beb99f25, type: 3}
