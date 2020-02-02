@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151233177}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.72, y: 0.13, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.023, y: 0.969, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1453710842}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &151233180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438933066978327635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.532, y: 0.22, z: 0}
+  m_LocalPosition: {x: -1.883, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3804341674555979557}
@@ -872,7 +872,9 @@ GameObject:
   - component: {fileID: 3804341674555979563}
   - component: {fileID: 3804341674555979556}
   - component: {fileID: 1670301323}
-  m_Layer: 0
+  - component: {fileID: 1670301317}
+  - component: {fileID: 3065669582002202639}
+  m_Layer: 10
   m_Name: ghost1_solid
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -964,7 +966,7 @@ MonoBehaviour:
   hasChest: 0
   hasHeart: 0
   equippedItem: 0
-  normalJumpForce: 10
+  normalJumpForce: 20
   legsJumpForce: 40
   moveForce: 50
   maxSpeed: 10
@@ -1050,13 +1052,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873d4c4da2cc61d4b880ae2902ecd423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunKnockbackImpulse: 5
+  gunKnockbackImpulse: 5000
   swordRange: 1
-  gunRange: 3
+  gunRange: 1000
   swordCDTime: 2
-  gunCDTime: 3
+  gunCDTime: 1
   swordCD: 0
   gunCD: 0
+--- !u!95 &1670301317
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804341674555979559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3501b78b3ca01b42bf8c5f7af4a07cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3065669582002202639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804341674555979559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae0d5fb2f2f54cc2be1a1dd5cd44752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6541607246221061164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d546f56abff8b9c43b893615b8f60dd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a703831d1fc8a34698322cdd970e41c, type: 3}
   m_Color: {r: 0.6925822, g: 0.7786034, b: 0.89705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1177,7 +1210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8325061786290047312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.074, y: 0.235, z: 0}
+  m_LocalPosition: {x: 1.36, y: 0.235, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3804341674555979557}
