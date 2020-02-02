@@ -22,8 +22,10 @@ public class FlyBodyPartSpawner : MonoBehaviour
     }
 
     public static void SpawnFlyBodyPart(CharacterBodyDisplayer cloneSrc) {
-        var GO = GameObject.Instantiate(instance.flyBodyPartPrefab);
-        var flybody = GO.GetComponent<FlyBodyPart>();
-        flybody.StartFlyAwart(cloneSrc,instance.config);
+        if (instance) {
+            var GO = GameObject.Instantiate(instance.flyBodyPartPrefab);
+            var flybody = GO.GetComponent<FlyBodyPart>();
+            flybody.StartFlyAwart(cloneSrc, instance.config);
+        }
     }
 }
