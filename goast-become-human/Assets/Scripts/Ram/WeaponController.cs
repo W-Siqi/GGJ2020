@@ -14,12 +14,17 @@ public class WeaponController : MonoBehaviour
 
     [SerializeField] bool swordCD;
     [SerializeField] bool gunCD;
-    
+
+    LineRenderer line;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        line = this.gameObject.GetComponent<LineRenderer>();
+
+        line.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -84,7 +89,14 @@ public class WeaponController : MonoBehaviour
                 gunCD = true;
                 StartCoroutine(WeaponCD_CR(ItemInfo.ItemType.Gun));
 
+                DrawBulletPath(origin, hit.point);
+
             }
+
+        } else
+        {
+
+            DrawBulletPath(origin, direction * 100);
 
         }
 
@@ -115,5 +127,28 @@ public class WeaponController : MonoBehaviour
 
     }
 
+
+    void DrawBulletPath(Vector2 startPos, Vector2 endPos)
+    {
+        line.enabled = true;
+
+        Vector3 pos1 = new Vector3(startPos.x, startPos.y, 0);
+        Vector3 pos2 = new Vector3(endPos.x, endPos.y, 0);
+
+        line.SetPosition(0, pos1);
+        line.SetPosition(1, pos2);
+
+        StartCoroutine(LineDissapear());
+
+    }
+
+    IEnumerator LineDissapear()
+    {
+
+        yield return new WaitForSeconds(0.1f);
+
+        line.enabled = false;
+
+    }
 
 }

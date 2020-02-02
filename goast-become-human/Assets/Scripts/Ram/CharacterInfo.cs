@@ -69,6 +69,7 @@ public class CharacterInfo : MonoBehaviour
             if (isAdd)
             {
                 BufferHealthModifier(chestHealth);
+
             } else
             {
                 BufferHealthModifier(-chestHealth);
@@ -85,6 +86,19 @@ public class CharacterInfo : MonoBehaviour
 
         if (bodyPartToSet == BodypartInfo.BodyPart.Heart && (!hasHeart || !isAdd))
         {
+            //If adding heart check if the player has all the other parts. If not, return false.
+            if (isAdd)
+            {
+
+                if(!hasChest || !hasHands || !hasLegs || !hasHead)
+                {
+
+                    return false;
+
+                }
+
+            }
+
             hasHeart = isAdd;
             return true;
         }
