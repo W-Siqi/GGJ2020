@@ -69,7 +69,7 @@ public class InputManager : MonoBehaviour
 
         }
         //SPECIAL
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 
             playerOne_X?.Invoke();
