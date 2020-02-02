@@ -1449,8 +1449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459797261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.058743, y: 8.909629, z: 10}
-  m_LocalScale: {x: 1, y: 34.87008, z: 1}
+  m_LocalPosition: {x: 28.058743, y: 14.2, z: 10}
+  m_LocalScale: {x: 1, y: 14.029759, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2180,41 +2180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1514854748ad74e86a8ba8443b18bf70, type: 3}
---- !u!84 &702051735
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1131
-  m_Height: 636
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &734963488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2718,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 702051735}
+      objectReference: {fileID: 1740942939}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e, type: 3}
 --- !u!1001 &866087126
@@ -3099,7 +3064,7 @@ Transform:
   m_GameObject: {fileID: 965503913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.44, y: -2.09, z: 36.6}
-  m_LocalScale: {x: 0.89716774, y: 0.89716774, z: 0.89716774}
+  m_LocalScale: {x: 0.44878125, y: 0.44878125, z: 0.44878125}
   m_Children: []
   m_Father: {fileID: 734963490}
   m_RootOrder: 2
@@ -3142,7 +3107,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 352c53e25a9ed485489b2311b06dba03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ca9c27640f7b42d292de066f6eac879, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4704,8 +4669,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384572478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.058743, y: 0.46, z: 10}
-  m_LocalScale: {x: 1, y: 45.232754, z: 1}
+  m_LocalPosition: {x: 28.058743, y: -5.1, z: 10}
+  m_LocalScale: {x: 1, y: 17.52769, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 72
@@ -5406,6 +5371,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00ff453ad130584abc76ed0250865b1, type: 3}
+--- !u!84 &1740942939
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteLightKit RT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1131
+  m_Height: 636
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1760863030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5950,7 +5950,7 @@ Transform:
   m_GameObject: {fileID: 1910169846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.34, y: 10.48, z: 36.6}
-  m_LocalScale: {x: 0.89461833, y: 0.89461833, z: 0.89461833}
+  m_LocalScale: {x: 0.44093785, y: 0.44093785, z: 0.44093785}
   m_Children: []
   m_Father: {fileID: 734963490}
   m_RootOrder: 1
@@ -5993,7 +5993,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1bb6358329a34c6e8b3a2bbb5e1bb0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eda6bcdbf15104438af721341e569ca7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
