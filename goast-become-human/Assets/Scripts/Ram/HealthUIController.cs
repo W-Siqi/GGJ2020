@@ -7,22 +7,28 @@ public class HealthUIController : MonoBehaviour
     [SerializeField] GameObject playerOneLegs_Full;
     [SerializeField] GameObject playerOneHand_Full;
     [SerializeField] GameObject playerOneChest_Full;
+    [SerializeField] GameObject playerOneShield_Full;
     [SerializeField] GameObject playerOneHead_Full;
     [SerializeField] GameObject playerOneHeart_Full;
     [SerializeField] GameObject playerOneLegs_Empty;
     [SerializeField] GameObject playerOneHand_Empty;
     [SerializeField] GameObject playerOneChest_Empty;
+    [SerializeField] GameObject playerOneShield_Empty;
     [SerializeField] GameObject playerOneHead_Empty;
     [SerializeField] GameObject playerOneHeart_Empty;
+   
+    
 
     [SerializeField] GameObject playerTwoLegs_Full;
     [SerializeField] GameObject playerTwoHand_Full;
     [SerializeField] GameObject playerTwoChest_Full;
+    [SerializeField] GameObject playerTwoShield_Full;
     [SerializeField] GameObject playerTwoHead_Full;
     [SerializeField] GameObject playerTwoHeart_Full;
     [SerializeField] GameObject playerTwoLegs_Empty;
     [SerializeField] GameObject playerTwoHand_Empty;
     [SerializeField] GameObject playerTwoChest_Empty;
+    [SerializeField] GameObject playerTwoShield_Empty;
     [SerializeField] GameObject playerTwoHead_Empty;
     [SerializeField] GameObject playerTwoHeart_Empty;
 
