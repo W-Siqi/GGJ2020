@@ -1164,6 +1164,8 @@ MonoBehaviour:
   facingLeft: 0
   groundRaycastDist: 2
   isStandingOnGround: 0
+  isMoveR: 0
+  isMoveL: 0
 --- !u!50 &3804341674555979563
 Rigidbody2D:
   serializedVersion: 4
