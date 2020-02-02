@@ -263,7 +263,7 @@ public class HealthUIController : MonoBehaviour
             playerTwoHeart_Full.SetActive(true);
             playerTwoHeart_Empty.SetActive(false);
         }
-        if(playerOne_CharInfo.hasChest && playerOne_CharInfo.hasHands && playerOne_CharInfo.hasLegs && playerOne_CharInfo.hasHead
+        if(playerTwo_CharInfo.hasChest && playerTwo_CharInfo.hasHands && playerTwo_CharInfo.hasLegs && playerTwo_CharInfo.hasHead
             && !playerTwo_CharInfo.hasHeart)
         {
 
