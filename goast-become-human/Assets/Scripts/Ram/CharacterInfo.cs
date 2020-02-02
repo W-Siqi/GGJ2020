@@ -81,6 +81,16 @@ public class CharacterInfo : MonoBehaviour
         if (bodyPartToSet == BodypartInfo.BodyPart.Head && (!hasHead || !isAdd))
         {
             hasHead = isAdd;
+
+            if (isAdd)
+            {
+
+                equippedItem = ItemInfo.ItemType.None;
+
+                DropEquippedItem();
+
+            }
+
             return true;
         }
 
@@ -165,7 +175,7 @@ public class CharacterInfo : MonoBehaviour
 
     public bool EquipItem(ItemInfo.ItemType item)
     {
-        if (!hasHands)
+        if (!hasHands || hasHead)
         {
             return false;
         }
