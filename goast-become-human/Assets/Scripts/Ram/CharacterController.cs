@@ -320,12 +320,19 @@ public class CharacterController : MonoBehaviour
 
         }
 
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
         if (collision.gameObject.CompareTag("Item"))
         {
 
             ItemInfo item = collision.gameObject.GetComponent<ItemInfo>();
 
-            if(item.thisItemType != ItemInfo.ItemType.None)
+            if (item.thisItemType != ItemInfo.ItemType.None)
             {
 
                 if (charInfo.EquipItem(item.thisItemType))
@@ -341,6 +348,7 @@ public class CharacterController : MonoBehaviour
         }
 
     }
+
 
 
 }
