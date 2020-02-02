@@ -22,31 +22,36 @@ public class CharacterBodyDisplayer : MonoBehaviour
     {
         bool isActivated = false;
 
-        switch (type) {
-            case BodyType.hand:
-                isActivated = bodyState.hasHands;
-                break;
-            case BodyType.chest:
-                isActivated = bodyState.hasChest;
-                break;
-            case BodyType.leg:
-                isActivated = bodyState.hasLegs;
-                break;
-            case BodyType.heart:
-                isActivated = bodyState.hasHeart;
-                break;
-            case BodyType.head:
-                isActivated = bodyState.hasHead;
-                break;
-            case BodyType.gun:
-                isActivated = bodyState.hasGun;
-                break;
-            case BodyType.sword:
-                isActivated = bodyState.hasSword;
-                break;
+        // compenent will not draw when full body is on
+        if (!bodyState.isFullBodyOn) {
+            switch (type)
+            {
+                case BodyType.hand:
+                    isActivated = bodyState.hasHands;
+                    break;
+                case BodyType.chest:
+                    isActivated = bodyState.hasChest;
+                    break;
+                case BodyType.leg:
+                    isActivated = bodyState.hasLegs;
+                    break;
+                case BodyType.heart:
+                    isActivated = bodyState.hasHeart;
+                    break;
+                case BodyType.head:
+                    isActivated = bodyState.hasHead;
+                    break;
+                case BodyType.gun:
+                    isActivated = bodyState.hasGun;
+                    break;
+                case BodyType.sword:
+                    isActivated = bodyState.hasSword;
+                    break;
+            }
         }
-
+        
         if (bodyRenderer) {
+            // paint cancel check
             if (bodyRenderer.enabled == true && isActivated == false)
                 OnPaintCanceled();
 

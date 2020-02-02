@@ -13,6 +13,16 @@ public class CharacterDrawer : MonoBehaviour
         public bool hasChest;
         public bool hasGun;
         public bool hasSword;
+
+        public bool isFullBodyOn {
+            get {
+                return  hasHead &&
+                        hasHands &&
+                        hasChest &&
+                        hasLegs &&
+                        hasHeart;
+            }
+        }
     }
 
     [System.Serializable]

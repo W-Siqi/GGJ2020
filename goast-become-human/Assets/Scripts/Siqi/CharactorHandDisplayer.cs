@@ -7,10 +7,10 @@ public class CharactorHandDisplayer : CharacterBodyDisplayer
     public SpriteRenderer handsupRenderer;
     public override void UpdateAccrodingTo(CharacterDrawer.BodyState bodyState)
     {
-        var isActivated = bodyState.hasHands;
+        // will not be drawn whtn full body on
+        var needDrawHand = !bodyState.isFullBodyOn && bodyState.hasHands;
 
-
-        if (bodyState.hasHands)
+        if (needDrawHand)
         {
             if (bodyState.hasHead)
             {
@@ -36,7 +36,7 @@ public class CharactorHandDisplayer : CharacterBodyDisplayer
         }
 
         if (spwanTag)
-            spwanTag.enabled = isActivated;
+            spwanTag.enabled = needDrawHand;
         else
             Debug.LogError("component missing");
     }
