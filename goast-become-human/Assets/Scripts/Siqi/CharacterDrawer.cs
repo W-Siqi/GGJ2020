@@ -32,6 +32,8 @@ public class CharacterDrawer : MonoBehaviour
     [SerializeField]
     private SpriteRenderer goastBodyRenderer;
     [SerializeField]
+    private SpriteRenderer humanRenderer;
+    [SerializeField]
     Color goastHiddenColor;
 
 
@@ -103,6 +105,8 @@ public class CharacterDrawer : MonoBehaviour
         else {
             goastBodyRenderer.color = Color.white;
         }
+
+        BecomeHumanCheck();
     }
 
     private void UpdateCharacterFacingDirection() {
@@ -122,5 +126,18 @@ public class CharacterDrawer : MonoBehaviour
         {
             bodyPart.UpdateAccrodingTo(debugger.debugState);
         }
+    }
+
+    private void BecomeHumanCheck() {
+        var isFullBody =  bodyState.hasHead &&
+            bodyState.hasHands &&
+            bodyState.hasChest &&
+            bodyState.hasLegs &&
+            bodyState.hasHeart;
+
+        if (isFullBody)
+            humanRenderer.enabled = true;
+        else
+            humanRenderer.enabled = false;
     }
 }
