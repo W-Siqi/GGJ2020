@@ -5,6 +5,7 @@ using UnityEngine;
 public class WinStateMonitor : MonoBehaviour
 {
     public CharacterInfo characterInfo;
+    public WinSceneConditionHandle.WinPlayer player;
 
     private void Update()
     {
@@ -17,7 +18,7 @@ public class WinStateMonitor : MonoBehaviour
 
             if (isFullBody) {
                 Debug.Log("win invoke!");
-                WinManager.instance.TriggerWin();
+                WinManager.instance.TriggerWin(player);
                 Destroy(this);
             }
         }
