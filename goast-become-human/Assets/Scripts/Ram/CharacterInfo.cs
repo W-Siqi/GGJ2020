@@ -26,18 +26,34 @@ public class CharacterInfo : MonoBehaviour
 
     public int playerHealthBuffer = 0;
 
+    AudioSource audioSource;
+
+    bool winSoundPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
 
         equippedItem = ItemInfo.ItemType.None;
 
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (!winSoundPlayed)
+        {
+
+            if (hasHands && hasLegs && hasHead && hasChest && hasHeart)
+            {
+                audioSource.PlayOneShot(GameObject.FindObjectOfType<SoundRepo>().win);
+                winSoundPlayed = true;
+            }
+        }
+
     }
 
     public bool SetBodyPart( BodypartInfo.BodyPart bodyPartToSet, bool isAdd )

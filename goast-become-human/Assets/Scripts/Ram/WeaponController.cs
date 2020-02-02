@@ -16,6 +16,8 @@ public class WeaponController : MonoBehaviour
     [SerializeField] bool gunCD;
 
     LineRenderer line;
+    AudioSource audioSource;
+    SoundRepo soundRepo;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class WeaponController : MonoBehaviour
 
         line.enabled = false;
 
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+        soundRepo = GameObject.FindObjectOfType<SoundRepo>();
     }
 
     // Update is called once per frame
@@ -46,6 +50,8 @@ public class WeaponController : MonoBehaviour
 
     void UseSword(Vector2 origin, Vector2 direction)
     {
+
+        audioSource.PlayOneShot(soundRepo.swordPress);
 
         LayerMask playerMask = LayerMask.GetMask("player");
 
@@ -71,6 +77,8 @@ public class WeaponController : MonoBehaviour
 
     void UseGun(Vector2 origin, Vector2 direction)
     {
+        audioSource.PlayOneShot(soundRepo.gunPress);
+
         LayerMask playerMask = LayerMask.GetMask("player");
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, gunRange, playerMask);
