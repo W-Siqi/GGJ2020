@@ -201,41 +201,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 58262978}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &40714533
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1192
-  m_Height: 636
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &48009135 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7015392222579866776, guid: 8af21512523f24eef9202e2ef3ae7d36,
@@ -2789,6 +2754,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!84 &471912510
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteLightKit RT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1194
+  m_Height: 639
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &472005124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6638,41 +6638,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab60cdb67eed3f4bb2d72dd90d3d3d0, type: 3}
---- !u!84 &1334393326
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1192
-  m_Height: 636
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!4 &1341123077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412760399729748750, guid: a662e0a87559d8045a353357b549242b,
@@ -10712,7 +10677,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1334393326}
+      objectReference: {fileID: 471912510}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: orthographic size
@@ -11142,75 +11107,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b759778389c41164cae2e17f0b44d6f2, type: 3}
---- !u!1001 &6075462428386570766
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -25.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.310463
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557492, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6075462428943557497, guid: d8a5330f70755a044af5c678df7977e9,
-        type: 3}
-      propertyPath: m_Name
-      value: GetBody
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d8a5330f70755a044af5c678df7977e9, type: 3}
 --- !u!1001 &6833867480613624210
 PrefabInstance:
   m_ObjectHideFlags: 0
