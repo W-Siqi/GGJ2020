@@ -30,16 +30,18 @@ public class PortalPair : MonoBehaviour
     }
 
     void PortalOpen() {
+        Debug.Log("portal open");
         if (portalA)
-            portalA.enabled = true;
+            portalA.gameObject.SetActive(true);
         if(portalB)
-            portalB.enabled = true;
+            portalB.gameObject.SetActive(true);
     }
 
     void PortalClose() {
+        Debug.Log("portal close");
         if (portalA)
-            portalA.enabled = false;
+            portalA.gameObject.SetActive(false);
         if (portalB)
-            portalB.enabled = false;
+            portalB.gameObject.SetActive(false);
     }
 }
