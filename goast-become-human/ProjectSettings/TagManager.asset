@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BulletLine
+    uniqueID: 906585675
+    locked: 0
+  - name: UI
+    uniqueID: 2204899491
+    locked: 0

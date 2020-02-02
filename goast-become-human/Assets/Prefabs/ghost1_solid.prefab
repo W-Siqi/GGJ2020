@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151233178}
+  - component: {fileID: 151233180}
   - component: {fileID: 151233179}
   - component: {fileID: 3804341674076893612}
-  - component: {fileID: 3804341674076893609}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -33,6 +33,20 @@ Transform:
   m_Father: {fileID: 1453710842}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &151233180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151233177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6174b6549ac462db1a9d9e9cc516e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  bodyRenderer: {fileID: 151233179}
 --- !u!212 &151233179
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40,7 +54,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151233177}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -95,22 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: sword
---- !u!114 &3804341674076893609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151233177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dca1f32a532d49d78d083aaa6402b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 5
-  bodyRenderer: {fileID: 151233179}
-  respawnPrefab: {fileID: 3884356844565135975, guid: 90494fb4c70759243ba530d790286e40,
-    type: 3}
 --- !u!1 &561367571
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +163,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561367571}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -274,7 +272,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779456777}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -383,7 +381,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096427737}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -492,7 +490,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159317484}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -665,7 +663,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519425146}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -729,9 +727,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638448680}
+  - component: {fileID: 1638448682}
   - component: {fileID: 1638448681}
   - component: {fileID: 3804341674076893611}
-  - component: {fileID: 3804341674076893608}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -753,6 +751,20 @@ Transform:
   m_Father: {fileID: 1453710842}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638448682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638448679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6174b6549ac462db1a9d9e9cc516e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
+  bodyRenderer: {fileID: 1638448681}
 --- !u!212 &1638448681
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -760,7 +772,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638448679}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -815,22 +827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: gun
---- !u!114 &3804341674076893608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638448679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dca1f32a532d49d78d083aaa6402b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 6
-  bodyRenderer: {fileID: 1638448681}
-  respawnPrefab: {fileID: 8390513550667899390, guid: a3b3fe7eb405c8c488439296a69136bf,
-    type: 3}
 --- !u!1 &1438933066978327635
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +874,7 @@ GameObject:
   - component: {fileID: 1670301323}
   - component: {fileID: 1670301317}
   - component: {fileID: 3065669582002202639}
-  - component: {fileID: 1400378094}
+  - component: {fileID: 4590818294058885677}
   m_Layer: 10
   m_Name: ghost1_solid
   m_TagString: Player
@@ -1095,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae0d5fb2f2f54cc2be1a1dd5cd44752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!120 &1400378094
+--- !u!120 &4590818294058885677
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1112,7 +1108,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1130,15 +1126,15 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 906585675
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
