@@ -32,8 +32,10 @@ public class TutorialManager : MonoBehaviour
                     finished = false;
             }
 
-            if (finished)
-                UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-        }
+			if (finished) {
+                yield return new WaitForSeconds(2f);
+				UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+			}
+		}
     }
 }
