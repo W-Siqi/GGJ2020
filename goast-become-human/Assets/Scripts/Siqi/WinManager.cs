@@ -14,10 +14,11 @@ public class WinManager : MonoBehaviour
         instance = this;
     }
 
-    public void TriggerWin()
+    public void TriggerWin(WinSceneConditionHandle.WinPlayer winPlayer)
     {
         if (!winReady) {
             winReady = true;
+            WinSceneConditionHandle.SetHandle(winPlayer);
             StartCoroutine(WinSceneTransferAfter(3f));
         }
 
