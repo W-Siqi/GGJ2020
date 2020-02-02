@@ -61,7 +61,7 @@ public class CharacterBodyDisplayer : MonoBehaviour
             Debug.LogError("component missing");
     }
 
-    void OnPaintCanceled() {
+    protected virtual void OnPaintCanceled() {
         FlyBodyPartSpawner.SpawnFlyBodyPart(this);
     }
 }
