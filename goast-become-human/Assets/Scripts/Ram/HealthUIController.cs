@@ -58,10 +58,13 @@ public class HealthUIController : MonoBehaviour
         playerOneChest_Empty.SetActive(true);
         playerOneChest_Full.SetActive(false);
 
+        playerOneShield_Empty.SetActive(true);
+        playerOneShield_Full.SetActive(false);
+
         playerOneHand_Empty.SetActive(true);
         playerOneHand_Empty.SetActive(false);
 
-        playerOneHeart_Empty.SetActive(true);
+        playerOneHeart_Empty.SetActive(false);
         playerOneHeart_Full.SetActive(false);
 
 
@@ -74,10 +77,13 @@ public class HealthUIController : MonoBehaviour
         playerTwoChest_Empty.SetActive(true);
         playerTwoChest_Full.SetActive(false);
 
+        playerTwoShield_Empty.SetActive(true);
+        playerTwoShield_Full.SetActive(false);
+
         playerTwoHand_Empty.SetActive(true);
         playerTwoHand_Empty.SetActive(false);
 
-        playerTwoHeart_Empty.SetActive(true);
+        playerTwoHeart_Empty.SetActive(false);
         playerTwoHeart_Full.SetActive(false);
 
     }
@@ -132,12 +138,29 @@ public class HealthUIController : MonoBehaviour
 
             playerOneChest_Full.SetActive(true);
             playerOneChest_Empty.SetActive(false);
+
+            if(playerOne_CharInfo.playerHealthBuffer > 0)
+            {
+
+                playerOneShield_Full.SetActive(true);
+                playerOneShield_Empty.SetActive(false);
+
+            } else
+            {
+                playerOneShield_Empty.SetActive(true);
+                playerOneShield_Full.SetActive(false);
+
+            }
+
         }
         else
         {
 
             playerOneChest_Full.SetActive(false);
             playerOneChest_Empty.SetActive(true);
+
+            playerOneShield_Empty.SetActive(true);
+            playerOneShield_Full.SetActive(false);
 
         }
 
@@ -147,13 +170,18 @@ public class HealthUIController : MonoBehaviour
             playerOneHeart_Full.SetActive(true);
             playerOneHeart_Empty.SetActive(false);
         }
-        else
+        
+        if(playerOne_CharInfo.hasChest && playerOne_CharInfo.hasHands && playerOne_CharInfo.hasLegs && playerOne_CharInfo.hasHead 
+            && !playerOne_CharInfo.hasHeart)
         {
 
             playerOneHeart_Full.SetActive(false);
             playerOneHeart_Empty.SetActive(true);
 
         }
+
+
+        // ---------- PLAYER TWO  --------------------
 
         if (playerTwo_CharInfo.hasHands)
         {
@@ -202,12 +230,30 @@ public class HealthUIController : MonoBehaviour
 
             playerTwoChest_Full.SetActive(true);
             playerTwoChest_Empty.SetActive(false);
+
+            if (playerTwo_CharInfo.playerHealthBuffer > 0)
+            {
+
+                playerTwoShield_Full.SetActive(true);
+                playerTwoShield_Empty.SetActive(false);
+
+            }
+            else
+            {
+                playerTwoShield_Empty.SetActive(true);
+                playerTwoShield_Full.SetActive(false);
+
+            }
+
         }
         else
         {
 
             playerTwoChest_Full.SetActive(false);
             playerTwoChest_Empty.SetActive(true);
+
+            playerTwoShield_Full.SetActive(false);
+            playerTwoShield_Empty.SetActive(true);
 
         }
 
@@ -217,7 +263,8 @@ public class HealthUIController : MonoBehaviour
             playerTwoHeart_Full.SetActive(true);
             playerTwoHeart_Empty.SetActive(false);
         }
-        else
+        if(playerOne_CharInfo.hasChest && playerOne_CharInfo.hasHands && playerOne_CharInfo.hasLegs && playerOne_CharInfo.hasHead
+            && !playerTwo_CharInfo.hasHeart)
         {
 
             playerTwoHeart_Full.SetActive(false);
@@ -225,5 +272,39 @@ public class HealthUIController : MonoBehaviour
 
         }
 
+        HeartScaleAnim();
+
     }
+
+    void HeartScaleAnim()
+    {
+
+        if(playerOneHeart_Empty.transform.parent.localScale.x > 2.5)
+        {
+
+            playerOneHeart_Empty.transform.parent.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+
+        } else
+        {
+
+            playerOneHeart_Empty.transform.parent.localScale += Vector3.one * (Time.deltaTime / 3);
+
+        }
+
+        if (playerTwoHeart_Empty.transform.parent.localScale.x > 2.5)
+        {
+
+            playerTwoHeart_Empty.transform.parent.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+
+        }
+        else
+        {
+
+            playerTwoHeart_Empty.transform.parent.localScale += Vector3.one * (Time.deltaTime / 3);
+
+        }
+
+    }
+
+
 }
