@@ -171,12 +171,15 @@ public class HealthUIController : MonoBehaviour
             playerOneHeart_Empty.SetActive(false);
         }
         
-        if(playerOne_CharInfo.hasChest && playerOne_CharInfo.hasHands && playerOne_CharInfo.hasLegs && playerOne_CharInfo.hasHead 
-            && !playerOne_CharInfo.hasHeart)
+        if(playerOne_CharInfo.hasChest && playerOne_CharInfo.hasHands && playerOne_CharInfo.hasLegs && playerOne_CharInfo.hasHead )
         {
 
-            playerOneHeart_Full.SetActive(false);
             playerOneHeart_Empty.SetActive(true);
+
+        } else
+        {
+
+            playerOneHeart_Empty.SetActive(false);
 
         }
 
@@ -263,12 +266,14 @@ public class HealthUIController : MonoBehaviour
             playerTwoHeart_Full.SetActive(true);
             playerTwoHeart_Empty.SetActive(false);
         }
-        if(playerTwo_CharInfo.hasChest && playerTwo_CharInfo.hasHands && playerTwo_CharInfo.hasLegs && playerTwo_CharInfo.hasHead
-            && !playerTwo_CharInfo.hasHeart)
+        if(playerTwo_CharInfo.hasChest && playerTwo_CharInfo.hasHands && playerTwo_CharInfo.hasLegs && playerTwo_CharInfo.hasHead)
+        {
+            playerTwoHeart_Empty.SetActive(true);
+
+        } else
         {
 
-            playerTwoHeart_Full.SetActive(false);
-            playerTwoHeart_Empty.SetActive(true);
+            playerTwoHeart_Empty.SetActive(false);
 
         }
 
