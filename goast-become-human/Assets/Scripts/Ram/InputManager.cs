@@ -10,14 +10,18 @@ public class InputManager : MonoBehaviour
     public event PlayerInputRec playerOne_Up;
     public event PlayerInputRec playerOne_NotUp;
     public event PlayerInputRec playerOne_Right;
+    public event PlayerInputRec playerOne_NotRight;
     public event PlayerInputRec playerOne_Left;
+    public event PlayerInputRec playerOne_NotLeft;
     public event PlayerInputRec playerOne_Down;
     public event PlayerInputRec playerOne_X;
 
     public event PlayerInputRec playerTwo_Up;
     public event PlayerInputRec playerTwo_NotUp;
     public event PlayerInputRec playerTwo_Right;
+    public event PlayerInputRec playerTwo_NotRight;
     public event PlayerInputRec playerTwo_Left;
+    public event PlayerInputRec playerTwo_NotLeft;
     public event PlayerInputRec playerTwo_Down;
     public event PlayerInputRec playerTwo_X;
 
@@ -60,12 +64,24 @@ public class InputManager : MonoBehaviour
 
             playerOne_Left?.Invoke();
 
+        } else
+        {
+
+            playerOne_NotLeft?.Invoke();
+
         }
+
+
         //RIGHT
         if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
 
             playerOne_Right?.Invoke();
+
+        } else
+        {
+
+            playerOne_NotRight?.Invoke();
 
         }
         //SPECIAL
@@ -106,14 +122,28 @@ public class InputManager : MonoBehaviour
 
             playerTwo_Left?.Invoke();
 
+        }else
+        {
+
+            playerTwo_NotLeft?.Invoke();
+
         }
+
+
         //RIGHT (avoiding condition when both left and right are pressed together)
         if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
         {
 
             playerTwo_Right?.Invoke();
 
+        }else
+        {
+
+            playerTwo_NotRight?.Invoke();
+
         }
+
+
         //SPECIAL
         if (Input.GetKeyDown(KeyCode.Return))
         {

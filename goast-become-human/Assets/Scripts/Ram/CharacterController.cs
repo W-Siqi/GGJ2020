@@ -29,6 +29,8 @@ public class CharacterController : MonoBehaviour
     bool jumpHeld;
     bool jumpStarted;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class CharacterController : MonoBehaviour
         charInfo = this.gameObject.GetComponent<CharacterInfo>();
         weaponCont = this.gameObject.GetComponent<WeaponController>();
         rb2D = this.gameObject.GetComponent<Rigidbody2D>();
-
+        animator = this.gameObject.GetComponent<Animator>();
         ipmanager = GameObject.FindObjectOfType<InputManager>();
 
         if (thisPlayerType == PlayerType.Player1)
@@ -46,7 +48,9 @@ public class CharacterController : MonoBehaviour
             ipmanager.playerOne_NotUp += PlayerNotUp;
             ipmanager.playerOne_Down += PlayerDown;
             ipmanager.playerOne_Left += PlayerLeft;
+            ipmanager.playerOne_NotLeft += PlayerNotLeft;
             ipmanager.playerOne_Right += PlayerRight;
+            ipmanager.playerOne_NotRight += PlayerNotRight;
             ipmanager.playerOne_X += PlayerX;
 
         } 
@@ -57,7 +61,9 @@ public class CharacterController : MonoBehaviour
             ipmanager.playerTwo_NotUp += PlayerNotUp;
             ipmanager.playerTwo_Down += PlayerDown;
             ipmanager.playerTwo_Left += PlayerLeft;
+            ipmanager.playerTwo_NotLeft += PlayerNotLeft;
             ipmanager.playerTwo_Right += PlayerRight;
+            ipmanager.playerTwo_NotRight += PlayerNotRight;
             ipmanager.playerTwo_X += PlayerX;
 
         }
@@ -85,6 +91,37 @@ public class CharacterController : MonoBehaviour
             isStandingOnGround = false;
         }
 
+        if (isWeaponFired && charInfo.equippedItem != ItemInfo.ItemType.None)
+        {
+
+            if (charInfo.equippedItem == ItemInfo.ItemType.Gun)
+                animator.SetTrigger("gun");
+
+            if (charInfo.equippedItem == ItemInfo.ItemType.Sword)
+                animator.SetTrigger("sword");
+
+            isWeaponFired = false;
+
+        }
+        else
+        {
+
+            if (isMoveL || isMoveR)
+            {
+                //Moving with hands on head or normal depending on has hands
+                if (charInfo.hasHead)
+                    animator.SetInteger("animState", 4);
+                else
+                    animator.SetInteger("animState", 1);
+
+            }
+            else
+            {
+                //Idle
+                animator.SetInteger("animState", 0);
+                Debug.Log("idle");
+            }
+        }
     }
 
 
@@ -249,8 +286,25 @@ public class CharacterController : MonoBehaviour
 
         facingLeft = false;
 
+        isMoveR = true;
+
     }
 
+    public bool isMoveR;
+    void PlayerNotRight()
+    {
+
+        isMoveR = false;
+
+    }
+
+    public bool isMoveL;
+    void PlayerNotLeft()
+    {
+
+        isMoveL = false;
+
+    }
 
     void PlayerLeft()
     {
@@ -269,9 +323,11 @@ public class CharacterController : MonoBehaviour
 
         facingLeft = true;
 
+        isMoveL = true;
+
     }
 
-
+    bool isWeaponFired;
     void PlayerX()
     {
 
@@ -290,6 +346,8 @@ public class CharacterController : MonoBehaviour
 
             weaponCont.UseWeapon(charInfo.equippedItem, origin, Vector2.right);
         }
+
+        isWeaponFired = true;
 
     }
 
