@@ -11,6 +11,13 @@ public class CharacterBodyDisplayer : MonoBehaviour
     public BodyType type;
     public SpriteRenderer bodyRenderer;
 
+    private SpwanObjectTag spwanTag = null;
+
+    private void Start()
+    {
+        spwanTag = GetComponent<SpwanObjectTag>();
+    }
+
     public void UpdateAccrodingTo(CharacterDrawer.BodyState bodyState)
     {
         bool isActivated = false;
@@ -43,5 +50,10 @@ public class CharacterBodyDisplayer : MonoBehaviour
             bodyRenderer.enabled = isActivated;
         else
             Debug.LogError("prefab missing");
+
+        if (spwanTag)
+            spwanTag.enabled = isActivated;
+        else
+            Debug.LogError("component missing");
     }
 }

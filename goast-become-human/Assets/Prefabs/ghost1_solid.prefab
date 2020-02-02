@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 151233178}
   - component: {fileID: 151233180}
   - component: {fileID: 151233179}
+  - component: {fileID: 3804341674076893612}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -95,6 +96,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151233177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: sword
 --- !u!1 &561367571
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +120,7 @@ GameObject:
   - component: {fileID: 561367572}
   - component: {fileID: 561367574}
   - component: {fileID: 561367573}
+  - component: {fileID: 3804341674076893617}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -190,6 +205,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561367571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: head
 --- !u!1 &779456777
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +229,7 @@ GameObject:
   - component: {fileID: 779456778}
   - component: {fileID: 779456780}
   - component: {fileID: 779456779}
+  - component: {fileID: 3804341674076893613}
   m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
@@ -285,6 +314,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779456777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: heart
 --- !u!1 &1096427737
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +338,7 @@ GameObject:
   - component: {fileID: 1096427738}
   - component: {fileID: 1096427740}
   - component: {fileID: 1096427739}
+  - component: {fileID: 3804341674076893614}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -380,6 +423,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096427737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: hands
 --- !u!1 &1159317484
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +447,7 @@ GameObject:
   - component: {fileID: 1159317485}
   - component: {fileID: 1159317487}
   - component: {fileID: 1159317486}
+  - component: {fileID: 3804341674076893615}
   m_Layer: 0
   m_Name: legs
   m_TagString: Untagged
@@ -475,6 +532,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159317484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: legs
 --- !u!1 &1453710841
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +620,7 @@ GameObject:
   - component: {fileID: 1519425147}
   - component: {fileID: 1519425149}
   - component: {fileID: 1519425148}
+  - component: {fileID: 3804341674076893616}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -634,6 +705,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519425146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: chest
 --- !u!1 &1638448679
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +729,7 @@ GameObject:
   - component: {fileID: 1638448680}
   - component: {fileID: 1638448682}
   - component: {fileID: 1638448681}
+  - component: {fileID: 3804341674076893611}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -729,6 +814,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804341674076893611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638448679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: gun
 --- !u!1 &1438933066978327635
 GameObject:
   m_ObjectHideFlags: 0
