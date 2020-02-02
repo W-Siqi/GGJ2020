@@ -7,6 +7,7 @@ public class SoundRepo : MonoBehaviour
     public AudioClip swordPress;
     public AudioClip gunPress;
     public AudioClip win;
+    public AudioClip gainBodyPart;
 
     // Start is called before the first frame update
     void Start()

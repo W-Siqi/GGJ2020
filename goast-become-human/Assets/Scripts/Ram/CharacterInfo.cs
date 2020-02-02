@@ -27,6 +27,7 @@ public class CharacterInfo : MonoBehaviour
     public int playerHealthBuffer = 0;
 
     AudioSource audioSource;
+    SoundRepo soundRepo;
 
     bool winSoundPlayed = false;
 
@@ -37,6 +38,8 @@ public class CharacterInfo : MonoBehaviour
         equippedItem = ItemInfo.ItemType.None;
 
         audioSource = this.gameObject.GetComponent<AudioSource>();
+
+        soundRepo = GameObject.FindObjectOfType<SoundRepo>();
 
     }
 
@@ -63,6 +66,13 @@ public class CharacterInfo : MonoBehaviour
         {
             hasHands = isAdd;
 
+            if (isAdd)
+            {
+
+                audioSource.PlayOneShot(soundRepo.gainBodyPart);
+
+            }
+
             if (!isAdd)
             {
                 equippedItem = ItemInfo.ItemType.None;
@@ -75,6 +85,14 @@ public class CharacterInfo : MonoBehaviour
         if (bodyPartToSet == BodypartInfo.BodyPart.Legs && (!hasLegs || !isAdd) )
         {
             hasLegs = isAdd;
+
+            if (isAdd)
+            {
+
+                audioSource.PlayOneShot(soundRepo.gainBodyPart);
+
+            }
+
             return true;
         }
 
@@ -85,6 +103,7 @@ public class CharacterInfo : MonoBehaviour
             if (isAdd)
             {
                 BufferHealthModifier(chestHealth);
+                audioSource.PlayOneShot(soundRepo.gainBodyPart);
 
             } else
             {
@@ -102,6 +121,8 @@ public class CharacterInfo : MonoBehaviour
             {
 
                 equippedItem = ItemInfo.ItemType.None;
+
+                audioSource.PlayOneShot(soundRepo.gainBodyPart);
 
                 DropEquippedItem();
 
