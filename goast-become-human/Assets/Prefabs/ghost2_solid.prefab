@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 137126382}
-  - component: {fileID: 137126384}
   - component: {fileID: 137126383}
   - component: {fileID: 8935074293139251177}
+  - component: {fileID: 3611300830127941569}
   m_Layer: 0
   m_Name: sword (1)
   m_TagString: Untagged
@@ -33,20 +33,6 @@ Transform:
   m_Father: {fileID: 7488736145574437757}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &137126384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137126381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6174b6549ac462db1a9d9e9cc516e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 5
-  bodyRenderer: {fileID: 137126383}
 --- !u!212 &137126383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -109,6 +95,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: sword
+--- !u!114 &3611300830127941569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137126381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca1f32a532d49d78d083aaa6402b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  bodyRenderer: {fileID: 137126383}
+  respawnPrefab: {fileID: 3884356844565135975, guid: 90494fb4c70759243ba530d790286e40,
+    type: 3}
 --- !u!1 &1595718171
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,9 +120,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1595718172}
-  - component: {fileID: 1595718174}
   - component: {fileID: 1595718173}
   - component: {fileID: 8935074293139251176}
+  - component: {fileID: 917938262162193791}
   m_Layer: 0
   m_Name: gun (1)
   m_TagString: Untagged
@@ -142,20 +144,6 @@ Transform:
   m_Father: {fileID: 7488736145574437757}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1595718174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595718171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6174b6549ac462db1a9d9e9cc516e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 6
-  bodyRenderer: {fileID: 1595718173}
 --- !u!212 &1595718173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -218,6 +206,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: gun
+--- !u!114 &917938262162193791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595718171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca1f32a532d49d78d083aaa6402b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 6
+  bodyRenderer: {fileID: 1595718173}
+  respawnPrefab: {fileID: 8390513550667899390, guid: a3b3fe7eb405c8c488439296a69136bf,
+    type: 3}
 --- !u!1 &1906994158376561796
 GameObject:
   m_ObjectHideFlags: 0
