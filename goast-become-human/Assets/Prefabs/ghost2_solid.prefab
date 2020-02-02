@@ -1168,6 +1168,7 @@ GameObject:
   - component: {fileID: 1766776719}
   - component: {fileID: 3826417955328729975}
   - component: {fileID: 8994993287804615069}
+  - component: {fileID: 1370509097}
   m_Layer: 10
   m_Name: ghost2_solid
   m_TagString: Player
@@ -1481,3 +1482,17 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1370509097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935074292748828775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0750c9849d749c295eb5e752f2547b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfo: {fileID: 8935074292748828779}
+  UI: {fileID: 0}
