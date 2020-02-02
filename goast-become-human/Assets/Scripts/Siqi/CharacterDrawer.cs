@@ -34,6 +34,7 @@ public class CharacterDrawer : MonoBehaviour
     [SerializeField]
     Color goastHiddenColor;
 
+
     private BodyState bodyState;
 
     private void Start()

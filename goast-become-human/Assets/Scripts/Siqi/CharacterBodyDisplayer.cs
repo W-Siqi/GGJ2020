@@ -11,14 +11,14 @@ public class CharacterBodyDisplayer : MonoBehaviour
     public BodyType type;
     public SpriteRenderer bodyRenderer;
 
-    private SpwanObjectTag spwanTag = null;
+    protected SpwanObjectTag spwanTag = null;
 
     private void Start()
     {
         spwanTag = GetComponent<SpwanObjectTag>();
     }
 
-    public void UpdateAccrodingTo(CharacterDrawer.BodyState bodyState)
+    public virtual void UpdateAccrodingTo(CharacterDrawer.BodyState bodyState)
     {
         bool isActivated = false;
 
