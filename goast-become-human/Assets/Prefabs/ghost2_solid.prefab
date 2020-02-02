@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 137126382}
   - component: {fileID: 137126384}
   - component: {fileID: 137126383}
+  - component: {fileID: 8935074293139251177}
   m_Layer: 0
   m_Name: sword (1)
   m_TagString: Untagged
@@ -95,6 +96,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137126381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: sword
 --- !u!1 &1595718171
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +120,7 @@ GameObject:
   - component: {fileID: 1595718172}
   - component: {fileID: 1595718174}
   - component: {fileID: 1595718173}
+  - component: {fileID: 8935074293139251176}
   m_Layer: 0
   m_Name: gun (1)
   m_TagString: Untagged
@@ -190,6 +205,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595718171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: gun
 --- !u!1 &1906994158376561796
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +229,7 @@ GameObject:
   - component: {fileID: 736737475361699314}
   - component: {fileID: 3853728582668064797}
   - component: {fileID: 2242149216513477025}
+  - component: {fileID: 8935074293139251178}
   m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
@@ -285,6 +314,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906994158376561796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: heart
 --- !u!1 &2998706505550210045
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +338,7 @@ GameObject:
   - component: {fileID: 567325106981973077}
   - component: {fileID: 1501692232450194061}
   - component: {fileID: 8526825814495687933}
+  - component: {fileID: 8935074293139251179}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -380,6 +423,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998706505550210045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: hands
 --- !u!1 &3325781534942669893
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +447,7 @@ GameObject:
   - component: {fileID: 3121622667937002883}
   - component: {fileID: 1684772312884160595}
   - component: {fileID: 4534319484889761023}
+  - component: {fileID: 8935074293139251180}
   m_Layer: 0
   m_Name: legs
   m_TagString: Untagged
@@ -475,6 +532,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325781534942669893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: legs
 --- !u!1 &3535901505327385275
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +556,7 @@ GameObject:
   - component: {fileID: 8798453362838204559}
   - component: {fileID: 81584080989016519}
   - component: {fileID: 4578901329931354761}
+  - component: {fileID: 8935074293139251182}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -570,6 +641,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3535901505327385275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: head
 --- !u!1 &3836148081162065796
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +789,7 @@ GameObject:
   - component: {fileID: 8104146633381816801}
   - component: {fileID: 2038328052416877987}
   - component: {fileID: 2417459493995153128}
+  - component: {fileID: 8935074293139251181}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -789,6 +874,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8935074293139251181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066849943382155800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ecf6c76c1c8449980d568d3ba85465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: chest
 --- !u!1 &8935074292122947053
 GameObject:
   m_ObjectHideFlags: 0

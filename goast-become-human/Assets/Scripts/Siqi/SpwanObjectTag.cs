@@ -9,7 +9,7 @@ public class SpwanObjectTag : MonoBehaviour
     public static int GetNumber(string tagName) {
         var sum = 0;
         foreach (var tagObj in FindObjectsOfType<SpwanObjectTag>()) {
-            if (tagObj.name == tagName) {
+            if (tagObj.name == tagName && tagObj.enabled ) {
                 sum++;
             }
         }
