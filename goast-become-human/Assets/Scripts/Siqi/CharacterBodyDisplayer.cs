@@ -46,8 +46,12 @@ public class CharacterBodyDisplayer : MonoBehaviour
                 break;
         }
 
-        if (bodyRenderer)
+        if (bodyRenderer) {
+            if (bodyRenderer.enabled == true && isActivated == false)
+                OnPaintCanceled();
+
             bodyRenderer.enabled = isActivated;
+        }
         else
             Debug.LogError("prefab missing");
 
@@ -55,5 +59,9 @@ public class CharacterBodyDisplayer : MonoBehaviour
             spwanTag.enabled = isActivated;
         else
             Debug.LogError("component missing");
+    }
+
+    void OnPaintCanceled() {
+        FlyBodyPartSpawner.SpawnFlyBodyPart(this);
     }
 }
