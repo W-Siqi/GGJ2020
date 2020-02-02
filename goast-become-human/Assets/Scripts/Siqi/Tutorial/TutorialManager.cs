@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Alpha0)) {
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
     }
