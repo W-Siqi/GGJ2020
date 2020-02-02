@@ -24,6 +24,8 @@ public class TutorialManager : MonoBehaviour
     IEnumerator TutorialEndCheck() {
         yield return null;
         while (true) {
+			yield return null;
+
             var finished = true;
             foreach (var tri in finishTrrigers) {
                 if (!tri.isReady)
