@@ -2907,6 +2907,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00ff453ad130584abc76ed0250865b1, type: 3}
+--- !u!84 &475399529
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteLightKit RT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1194
+  m_Height: 639
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &481451769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5218804942031525681, guid: 90882acd6e39edd468ed1b002e0bd42f,
@@ -3488,7 +3523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4294327617376784, guid: 2253f8e536895cd449b75e71ab8e1845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4294327617376784, guid: 2253f8e536895cd449b75e71ab8e1845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4362,41 +4397,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 831116536}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &860700012
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1390
-  m_Height: 670
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 59
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &866542149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10347,7 +10347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4294327617376784, guid: 2253f8e536895cd449b75e71ab8e1845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.88
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4294327617376784, guid: 2253f8e536895cd449b75e71ab8e1845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10564,41 +10564,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1cf0bffeaa616147bbcfe2a02e59ca4, type: 3}
---- !u!84 &2040271731
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SpriteLightKit RT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1390
-  m_Height: 670
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 59
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &2078521719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10807,7 +10772,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 860700012}
+      objectReference: {fileID: 475399529}
     - target: {fileID: 7399375402018193619, guid: 3f812f97bc95a40e09a7edbc0c6e5a4e,
         type: 3}
       propertyPath: orthographic size
