@@ -1046,6 +1046,7 @@ GameObject:
   - component: {fileID: 1291461442}
   - component: {fileID: 3640965016676824104}
   - component: {fileID: 7048764480418445418}
+  - component: {fileID: 1046676025009594242}
   m_Layer: 10
   m_Name: ghost1_solid
   m_TagString: Player
@@ -1485,6 +1486,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterInfo: {fileID: 3804341674555979561}
   player: 0
+--- !u!114 &1046676025009594242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804341674555979559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364b6790067ae497bb4045677f1a9b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 561367573}
 --- !u!1 &6478820216558575651
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class ModApplier : MonoBehaviour
     public Sprite headSprite = null;
     private void Start()
     {
+        instance = this;
+
         var archive = ModArchive.ReadArchive();
         var headImg = Resources.Load<Texture2D>(archive.choosedHeadImagePath);
         if (headImg)
