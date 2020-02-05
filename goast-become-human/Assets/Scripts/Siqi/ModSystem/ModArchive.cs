@@ -6,6 +6,7 @@ using UnityEditor;
 [System.Serializable]
 public class ModArchive : ScriptableObject
 {
+    public const string DEFAUT_IMG_PATH = "dft";
     const string SAVE_PATH = "Assets/Resources/MOD/modArchive.asset";
     const string READ_PATH = "MOD/modArchive";
 
@@ -22,10 +23,8 @@ public class ModArchive : ScriptableObject
         var archive = Resources.Load<ModArchive>(READ_PATH);
         if (archive == null)
         {
-            var newArchive = ScriptableObject.CreateInstance<ModArchive>();
-            AssetDatabase.CreateAsset(newArchive, SAVE_PATH);
-            instance = newArchive;
-            return newArchive;
+            Debug.LogError("archive miss");
+            return null;
         }
         else {
             instance = archive;

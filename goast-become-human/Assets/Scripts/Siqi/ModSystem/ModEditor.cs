@@ -8,11 +8,15 @@ public class ModEditor : MonoBehaviour
 
     public GameObject modWindow = null;
     public List<HeadImgSelector> headImgSelectors;
+    public DefaultHeadImgSelector defaultHeadImgSelector;
     public int curPage = 0;
 
     private void Start()
     {
+        ModArchive.ReadArchive().choosedHeadImagePath = ModArchive.DEFAUT_IMG_PATH;
+
         instance = this;
+
         RefreshModWindow();
     }
 
@@ -56,8 +60,11 @@ public class ModEditor : MonoBehaviour
     public void InitHeadImageSelectors() {
         var archive = ModArchive.ReadArchive();
 
-        int countPerPage = headImgSelectors.Count;
+        // defualt head img
+        defaultHeadImgSelector.SetSelected(ModArchive.DEFAUT_IMG_PATH == archive.choosedHeadImagePath);
 
+        // init page
+        int countPerPage = headImgSelectors.Count;
         if (countPerPage == 0) {
             return;
         }

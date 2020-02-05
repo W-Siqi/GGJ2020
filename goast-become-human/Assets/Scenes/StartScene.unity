@@ -623,6 +623,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6061577926482383385, guid: 3fa15341dfe9a4658af62aa21606140b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061577926482383397, guid: 3fa15341dfe9a4658af62aa21606140b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6061577926729356157, guid: 3fa15341dfe9a4658af62aa21606140b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -683,20 +693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModEditor
       objectReference: {fileID: 0}
-    - target: {fileID: 6061577926729356158, guid: 3fa15341dfe9a4658af62aa21606140b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6061577927610597789, guid: 3fa15341dfe9a4658af62aa21606140b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6061577927618629070, guid: 3fa15341dfe9a4658af62aa21606140b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fa15341dfe9a4658af62aa21606140b, type: 3}

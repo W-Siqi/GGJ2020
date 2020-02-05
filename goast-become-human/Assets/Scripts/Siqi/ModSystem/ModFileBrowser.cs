@@ -79,6 +79,5 @@ public class ModFileBrowser : MonoBehaviour
     private void SaveTextureToPath(Texture2D texture, string fullPath)
     {
         System.IO.File.WriteAllBytes(fullPath, texture.EncodeToPNG());
-        UnityEditor.AssetDatabase.Refresh();
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class HeadImgSelector : MonoBehaviour
 {
     public Image image;
+    public Image selectedIndicator;
+
     [SerializeField]
     private string pathOfImage = "";
 
@@ -18,10 +20,10 @@ public class HeadImgSelector : MonoBehaviour
 
         if (isNowSelected)
         {
-            image.color = Color.blue;
+            selectedIndicator.enabled = true;
         }
         else {
-            image.color = Color.white;
+            selectedIndicator.enabled = false;
         }
     }
 
