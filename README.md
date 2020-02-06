@@ -1,6 +1,6 @@
 [GGJ-site]:https://globalgamejam.org/
 [award-pic]:/Introduction/award.jpg
-[win-build]:/Builds/MacOS
+[win-build]:https://github.com/W-Siqi/GGJ2020/raw/master/Builds/Windows/WinBuild.zip
 [mac-build]:/Builds/Windows
 # About
 ## Global Game Jam
@@ -19,8 +19,6 @@ Designer/Animator: Ziheng
 ## MOD inside the game!
 
 # Learn more about 
-## Just Play it 
-First, download this repo.  
-Open the build and play:  
-1. Windows Build Path:[]
-2. Mac Build Path:[]
+## Just Play it  
+1. Windows: [download][win-build]
+2. Mac OSX: [download][mac-build]
