@@ -69,6 +69,7 @@ public class ModFileBrowser : MonoBehaviour
 
             // need refresh
             ModEditor.instance.RefreshModWindow();
+            archive.Save();
         }
     }
 }

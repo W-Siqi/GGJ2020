@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class ModResourceManager
@@ -19,6 +20,31 @@ public class ModResourceManager
         var savePath = string.Format("{0}/{1}", GetMODDirectory(), savename);
         System.IO.File.WriteAllBytes(savePath, scaled.EncodeToPNG());
         return savePath;
+    }
+
+    public static ModArchive LoadModArchive() {
+        var modDir = GetMODDirectory();
+        var archivePath = modDir + "/archive.txt";
+        if (File.Exists(archivePath))
+        {
+            var rawString = File.ReadAllText(archivePath);
+            var archive = JsonUtility.FromJson<ModArchive>(rawString);
+            return archive;
+        }
+        else {
+            var archive = new ModArchive();
+            var rawString = JsonUtility.ToJson(archive);
+            File.WriteAllText(archivePath, rawString);
+            return archive;
+        }
+    }
+
+    public static void ApplyArchive(ModArchive archive) {
+        var modDir = GetMODDirectory();
+        var archivePath = modDir + "/archive.txt";
+
+        var rawString = JsonUtility.ToJson(archive);
+        File.WriteAllText(archivePath, rawString);
     }
 
     private static Texture2D ScaleTexture(Texture2D source, int targetWidth, int targetHeight)

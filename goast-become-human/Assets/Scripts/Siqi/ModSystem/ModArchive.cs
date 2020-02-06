@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEditor;
 
 [System.Serializable]
-public class ModArchive : ScriptableObject
+public class ModArchive
 {
     public const string DEFAUT_IMG_PATH = "dft";
-    const string SAVE_PATH = "Assets/Resources/MOD/modArchive.asset";
-    const string READ_PATH = "MOD/modArchive";
 
     private static ModArchive instance = null;
 
@@ -17,10 +15,10 @@ public class ModArchive : ScriptableObject
     public int nameCounter = 0;
 
     public static ModArchive ReadArchive() {
-        if (instance)
+        if (instance != null)
             return instance;
 
-        var archive = Resources.Load<ModArchive>(READ_PATH);
+        var archive = ModResourceManager.LoadModArchive();
         if (archive == null)
         {
             Debug.LogError("archive miss");
@@ -30,5 +28,9 @@ public class ModArchive : ScriptableObject
             instance = archive;
             return archive;
         }
+    }
+
+    public void Save() {
+        ModResourceManager.ApplyArchive(this);
     }
 }
