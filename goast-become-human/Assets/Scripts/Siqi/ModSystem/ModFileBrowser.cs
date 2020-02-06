@@ -58,15 +58,11 @@ public class ModFileBrowser : MonoBehaviour
         if (www.isDone)
         {
             var img = www.texture;
-            var archive = ModArchive.ReadArchive();
-            var savename = string.Format("{0}", archive.nameCounter++);
-            var savePath = string.Format("{0}/Resources/{1}/{2}.png", Application.dataPath, saveDirectory,savename);
-            var resourcePath = string.Format("{0}/{1}",saveDirectory,savename);
-            
-            SaveTextureToPath(img, savePath);
+           
+            var savedPath = ModResourceManager.SaveImage(img);
 
-            // write to archive
-            archive.headImagePaths.Add(resourcePath);
+            var archive = ModArchive.ReadArchive();
+            archive.headImagePaths.Add(savedPath);
 
             // close the browser when it is done
             browserOn = false;
@@ -74,10 +70,5 @@ public class ModFileBrowser : MonoBehaviour
             // need refresh
             ModEditor.instance.RefreshModWindow();
         }
-    }
-
-    private void SaveTextureToPath(Texture2D texture, string fullPath)
-    {
-        System.IO.File.WriteAllBytes(fullPath, texture.EncodeToPNG());
     }
 }

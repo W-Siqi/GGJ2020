@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80956a8a42cf247fbab2b5e19bcdf5b3, type: 3}
   m_Name: modArchive
   m_EditorClassIdentifier: 
-  choosedHeadImagePath: 
+  choosedHeadImagePath: dft
   headImagePaths: []
   nameCounter: 0

@@ -12,11 +12,8 @@ public class HeadImgSelector : MonoBehaviour
     private string pathOfImage = "";
 
     public void InitSelector(string path,bool isNowSelected) {
-        var img = Resources.Load<Texture2D>(path);
-        var sprite = Sprite.Create(img, new Rect(0, 0, img.width, img.height), new Vector2(0.5f, 0.5f));
-
         pathOfImage = path;
-        image.sprite = sprite;
+        StartCoroutine(LoadSprite(path));
 
         if (isNowSelected)
         {
@@ -33,5 +30,16 @@ public class HeadImgSelector : MonoBehaviour
 
     public void OnHeadImgSelected() {
         ModEditor.instance.OnHeadImgSelected(pathOfImage);
+    }
+
+    IEnumerator LoadSprite(string path) {
+        WWW www = new WWW("file://" + path);
+        yield return www;
+        if (www.isDone)
+        {
+            var tex = www.texture;
+            var sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+            image.sprite = sprite;
+        }
     }
 }
