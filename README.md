@@ -18,12 +18,12 @@ Designer/Animator: Ziheng Xiao
 Programmers: Siqi Wang, Ram Lyer  
 
 # Try it!
+Ghost: Become Human is a 2-player competitive PC game. Two players need to gather body parts to become human from ghosts. As the ghost collects more body parts, it will gain more power and constraints as well.
 ### Windows Build : [download][win-build],Mac OSX Build: [download][mac-build]
-
-# Interesting things of this game
-## Now, the weather! 
+# Some Interesting things
+### Now, the weather! 
 It will snow inside the game, if Pittsburgh is too cold when you open the game(**in real time**).
 ![image][weather-img]
-## MOD inside the game!
+### MOD inside the game!
 You can MOD this game in inside game by uploading picture as "head" of characer.
 ![image](/Introduction/mod.gif)
