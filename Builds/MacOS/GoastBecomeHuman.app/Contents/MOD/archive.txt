@@ -1,1 +1,1 @@
-{"choosedHeadImagePath":"dft","headImagePaths":["/Users/siqiwang/Git/GGJ2020/Builds/MacOS/GoastBecomeHuman.app/Contents/MOD/0.png","/Users/siqiwang/Git/GGJ2020/Builds/MacOS/GoastBecomeHuman.app/Contents/MOD/1.png"],"nameCounter":2}
+{"choosedHeadImagePath":"/Users/siqiwang/Git/GGJ2020/Builds/MacOS/GoastBecomeHuman.app/Contents/MOD/1.png","headImagePaths":["/Users/siqiwang/Git/GGJ2020/Builds/MacOS/GoastBecomeHuman.app/Contents/MOD/0.png","/Users/siqiwang/Git/GGJ2020/Builds/MacOS/GoastBecomeHuman.app/Contents/MOD/3.png"],"nameCounter":4}
